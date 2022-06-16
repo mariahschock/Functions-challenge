@@ -102,7 +102,7 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    return arr.map(pet => ({ ...pet, name: pet.name.toUpperCase() }));
 }
 
 
@@ -113,7 +113,7 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+    return arr.map(pet => pet.name + pet.type);
 }
 
 /*
@@ -126,7 +126,7 @@ OUTPUT:
 */
 
 export function findByName(name, arr) {
-    return {};
+    return arr.find(pet => pet.name === name);
 }
 
 /*
@@ -152,7 +152,7 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return [];
+    return arr.map(pet => pet.name + pet.type).map(pet => pet.name + pet.type);
 }
 
 ////////////////////////////////////////////////////////
@@ -181,7 +181,7 @@ Output:
 */
 
 export function getCars(arr) {
-    return [];
+    return arr.filter(vehicle => vehicle.type === 'car');
 }
 
 /*
@@ -194,7 +194,7 @@ Output:
 */
 
 export function getChevyCars(arr) {
-    return [];
+    return arr.filter(vehicle => vehicle.type === 'car').filter(vehicle => vehicle.make === 'chevy');
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
