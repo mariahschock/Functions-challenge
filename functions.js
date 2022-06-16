@@ -152,7 +152,7 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return arr.map(pet => pet.name + pet.type).map(pet => pet.name + pet.type);
+    return arr.map(animal => [['name', animal.name], ['type', animal.type]]);
 }
 
 ////////////////////////////////////////////////////////
